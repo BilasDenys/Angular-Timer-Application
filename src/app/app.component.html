@@ -3,15 +3,22 @@
     <h1 class="title">Timer Application</h1>
 
     <div class="status">
-      <h2><span>Status:</span>
+      <h2 [ngClass]="{
+    red: isStopped,
+    orange: isWaited,
+    green: isStarted
+    }"><span >Status:</span>
         {{ this.isStarted && !this.isStopped && !this.isWaited ? 'Start' : null}}
         {{ !this.isStarted && this.isStopped && !this.isWaited ? 'Stop' : null}}
         {{ !this.isStarted && this.isStopped && this.isWaited ? 'Wait' : null}}
       </h2>
     </div>
-    <div class="display">
-      {{hours < 10 ? '0' + hours : hours}}: {{minutes < 10 ? '0' + minutes : minutes}}
-      : {{seconds < 10 ? '0' + seconds : seconds}}
+    <div class="display" [ngClass]="{
+    red: isStopped,
+    orange: isWaited,
+    green: isStarted
+    }">
+      {{hours < 10 ? '0' + hours : hours}}:{{minutes < 10 ? '0' + minutes : minutes}}:{{seconds < 10 ? '0' + seconds : seconds}}
     </div>
 
     <div class="btn">

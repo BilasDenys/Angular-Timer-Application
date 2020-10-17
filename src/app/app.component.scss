@@ -7,7 +7,7 @@
   font-family: "Roboto Light", sans-serif;
 
   .wrapper {
-    width: 600px;
+    width: 450px;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
     margin: 2rem auto;
     padding: 2rem 1rem;
@@ -20,8 +20,9 @@
   }
 
   .display {
-    margin: 1rem 0;
-    font-size: 3rem;;
+    margin: 1.5rem 0;
+    font-size: 3rem;
+    transition: all 0.25s ease-in-out;
   }
 
   .status {
@@ -29,6 +30,7 @@
 
     span {
       font-weight: 100;
+      color: black
     }
   }
 
@@ -37,13 +39,14 @@
       padding: 1rem .75rem;
       border: none;
       border-radius: 10px;
+      outline: none;
 
       font-size: 1rem;
       transition: all .25s ease-in-out;
 
       &:hover {
         box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
-        color: lightcoral;
+        color: #455a64 ;
       }
     }
 
@@ -51,4 +54,14 @@
       margin: 0 1rem;
     }
   }
+}
+
+.red {
+  color: #ff7043;
+}
+.green {
+  color: #80cbc4;
+}
+.orange {
+  color: #ffcc80;
 }
