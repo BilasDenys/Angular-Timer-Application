@@ -1,0 +1,54 @@
+.container {
+
+  width: 100%;
+  display: grid;
+  text-align: center;
+  margin-top: 3rem;
+  font-family: "Roboto Light", sans-serif;
+
+  .wrapper {
+    width: 600px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    background-color: #fff
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .display {
+    margin: 1rem 0;
+    font-size: 3rem;;
+  }
+
+  .status {
+    margin-bottom: 1.5rem;
+
+    span {
+      font-weight: 100;
+    }
+  }
+
+  .btn {
+    button {
+      padding: 1rem .75rem;
+      border: none;
+      border-radius: 10px;
+
+      font-size: 1rem;
+      transition: all .25s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+        color: lightcoral;
+      }
+    }
+
+    button:nth-child(odd) {
+      margin: 0 1rem;
+    }
+  }
+}
