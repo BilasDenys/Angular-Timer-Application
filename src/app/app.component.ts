@@ -39,9 +39,11 @@ export class AppComponent implements AfterViewInit {
 
 
     this.startStopClick.subscribe(() => {
+
       this.clickCount++;
       this.isStarted = !this.isStarted;
       this.isStopped = !this.isStopped;
+
       if (this.isStarted) {
         this.startStopFunc();
       }
@@ -85,6 +87,8 @@ export class AppComponent implements AfterViewInit {
     if (this.clickCount >= 3) {
       this.resetFunc();
       this.clickCount = 1;
+      this.isStarted = !this.isStarted;
+      this.isStopped = !this.isStopped;
     }
 
     this.sub = interval(1000).subscribe(() => {
@@ -111,6 +115,4 @@ export class AppComponent implements AfterViewInit {
       this.hours = this.minutes = this.seconds = 0;
     }
   }
-
-
 }
